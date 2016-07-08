@@ -1,6 +1,12 @@
 # prompt
 Pretty bash prompt that colors fields and displays customizable command output
 
+## Installation
+
+Source `prompt.sh` in your .\*rc file.
+
+## Usage
+
 ```
 USER@HOST:DIRECTORY (COMMAND STATUS)
 [ACTIVE JOBS]
