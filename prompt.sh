@@ -68,5 +68,5 @@ fi
 # track jobs
 PROMPT_COMMAND='_JOBS="$(jobs)";'"${PROMPT_COMMAND}"
 
-PS1='\[\e]0;\u@\h: \w\a\]${debian_chroot:+($debian_chroot)}\[\033[${PS1_USER_COLOR}m\]\u\[\033[${PS1_HOST_COLOR}m\]@\h\[\033[${PS1_PATH_COLOR}m\]:\w $(STATUS=$?; if [ $STATUS = 0 ]; then printf \[\033[%bm\]\(%b\) $PS1_STATUS_GOOD_COLOR $STATUS; else printf \[\033[%bm\]\(%b\) $PS1_STATUS_BAD_COLOR $STATUS; fi)$(if [ "$_JOBS" ]; then awk "{printf \"\[\033[0m\]\\n\[\033[${PS1_JOB_COLOR}m\]%s\",\$0}" <<<"$_JOBS"; fi)$(eval "$PS1_COMMAND" 2> /dev/null | awk "{printf \"\[\033[0m\]\\n\[\033[${PS1_COMMAND_COLOR}m\]%s\",\$0}")\[\033[0m\]\n\[\033[${PS1_PROMPT_COLOR}m\]\$\[\033[0m\] '
+PS1='\[\e]0;\u@\h: \w\a\]\[\033[${PS1_USER_COLOR}m\]\u\[\033[${PS1_HOST_COLOR}m\]@\h\[\033[${PS1_PATH_COLOR}m\]:\w $(STATUS=$?; if [ $STATUS = 0 ]; then printf \[\033[%bm\]\(%b\) $PS1_STATUS_GOOD_COLOR $STATUS; else printf \[\033[%bm\]\(%b\) $PS1_STATUS_BAD_COLOR $STATUS; fi)$(if [ "$_JOBS" ]; then awk "{printf \"\[\033[0m\]\\n\[\033[${PS1_JOB_COLOR}m\]%s\",\$0}" <<<"$_JOBS"; fi)$(eval "$PS1_COMMAND" 2> /dev/null | awk "{printf \"\[\033[0m\]\\n\[\033[${PS1_COMMAND_COLOR}m\]%s\",\$0}")\[\033[0m\]\n\[\033[${PS1_PROMPT_COLOR}m\]\$\[\033[0m\] '
 PS2='\[\033[${PS1_PROMPT_COLOR}m\]>\[\033[0m\] '
