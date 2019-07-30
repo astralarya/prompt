@@ -1,6 +1,8 @@
 # prompt
 Pretty bash prompt that colors fields and displays customizable command output
 
+![Bash prompt screenshot](screenshot.png)
+
 ## Installation
 
 Source `prompt.sh` in your .\*rc file.
